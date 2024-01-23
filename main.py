@@ -54,7 +54,7 @@ def advertising(message):
 
 def ask(message):
     user_id = message.from_user.id
-    if int(user_id) == admin_id:
+    if int(user_id) == int(admin_id):
         message_to = message.text
         for i in open('users.txt', 'r').readlines():
             bot.send_message(i, f"{message_to}")
